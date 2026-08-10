@@ -1,3 +1,0 @@
-Este proyecto consiste en el desarrollo de un relé WiFi controlado mediante un ESP8266, cuyo objetivo principal es permitir el accionamiento remoto de una alarma o timbre utilizando una conexión WiFi.
-
-El sistema permite enviar una señal desde un dispositivo conectado a la misma red, como una computadora o un teléfono celular, para activar o desactivar el relé. De esta manera, se puede controlar un dispositivo eléctrico de forma inalámbrica, evitando la necesidad de utilizar un interruptor físico conectado directamente al sistema.
