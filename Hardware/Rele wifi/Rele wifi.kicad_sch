@@ -2890,6 +2890,18 @@
 		)
 		(uuid 76440ef0-f8d0-4f53-ac8f-68c7d08a2ada)
 	)
+	(rectangle
+		(start 201.93 60.96)
+		(end 274.32 119.38)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 818e25b2-592b-48c6-8256-58a64b611fd7)
+	)
 	(junction
 		(at 156.21 50.8)
 		(diameter 0)
@@ -2962,6 +2974,16 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 96.52) (xy 223.52 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c8d7d76-ed6d-40c1-9184-3dc9b2546fd6")
+	)
+	(wire
+		(pts
 			(xy 133.35 58.42) (xy 137.16 58.42)
 		)
 		(stroke
@@ -3022,6 +3044,26 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 96.52) (xy 233.68 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44c680ba-eeab-455e-8db3-6f0bcb2b1134")
+	)
+	(wire
+		(pts
+			(xy 241.3 81.28) (xy 241.3 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d4a4082-5662-4fad-9749-8c17038dcb39")
+	)
+	(wire
+		(pts
 			(xy 156.21 30.48) (xy 170.18 30.48)
 		)
 		(stroke
@@ -3039,6 +3081,16 @@
 			(type default)
 		)
 		(uuid "68f0e346-5633-40ed-9e84-c72690d4da27")
+	)
+	(wire
+		(pts
+			(xy 241.3 90.17) (xy 241.3 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6942d065-0d95-45f7-8dc4-8d594b9a8ede")
 	)
 	(wire
 		(pts
@@ -3089,6 +3141,16 @@
 			(type default)
 		)
 		(uuid "805e48ec-4b24-423f-a02a-727caca4b5d0")
+	)
+	(wire
+		(pts
+			(xy 241.3 101.6) (xy 241.3 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8acf4906-b3e0-4dbc-ae96-5c55f380a90d")
 	)
 	(wire
 		(pts
@@ -3192,6 +3254,16 @@
 	)
 	(wire
 		(pts
+			(xy 241.3 71.12) (xy 241.3 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e11b8002-1a9f-4b35-86db-bd2124d69a21")
+	)
+	(wire
+		(pts
 			(xy 35.56 63.5) (xy 40.64 63.5)
 		)
 		(stroke
@@ -3250,6 +3322,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "GPIO7"
+		(shape input)
+		(at 220.98 96.52 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3baf66e3-4a4e-4218-a57b-dc4b6a2f2011")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 212.31 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -3355,6 +3449,28 @@
 		(uuid "d010d2c5-af8e-4a23-8bb5-a97ecd1c291a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 31.97 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "GPIO7"
+		(shape input)
+		(at 40.64 48.26 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d3410f37-66e9-4197-ab0b-70e769e27b25")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 31.97 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3517,77 +3633,6 @@
 			(project "Rele wifi"
 				(path "/ffdbb2c2-c0c7-4e42-be77-90fd93012b1e"
 					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 240.03 39.37 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "37cfcd76-4ea2-41f4-b1c1-5442bee7bf7d")
-		(property "Reference" "J3"
-			(at 242.57 40.6399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Screw_Terminal_01x02"
-			(at 242.57 41.9099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm"
-			(at 240.03 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 240.03 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 240.03 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e25005e2-9d29-45d5-bf57-4accaee7693c")
-		)
-		(pin "2"
-			(uuid "ceaebacf-92ef-4dd9-8daf-e261e58c7485")
-		)
-		(instances
-			(project "Rele wifi"
-				(path "/ffdbb2c2-c0c7-4e42-be77-90fd93012b1e"
-					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -3946,6 +3991,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 241.3 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6c5dcad3-7c57-418f-a7f2-2a25a9da9b62")
+		(property "Reference" "R5"
+			(at 244.348 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "47"
+			(at 237.744 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 239.522 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 241.3 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 241.3 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d61bfcb5-b860-4237-8574-8687a9064fec")
+		)
+		(pin "1"
+			(uuid "38a05985-bee3-4552-badd-5edef2193447")
+		)
+		(instances
+			(project "Rele wifi"
+				(path "/ffdbb2c2-c0c7-4e42-be77-90fd93012b1e"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Screw_Terminal_01x03")
 		(at 240.03 30.48 0)
 		(unit 1)
@@ -4014,6 +4126,281 @@
 			(project ""
 				(path "/ffdbb2c2-c0c7-4e42-be77-90fd93012b1e"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 241.3 86.36 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7d12416f-47fa-4f00-a025-4ac185912d99")
+		(property "Reference" "D2"
+			(at 245.11 86.6774 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED IR"
+			(at 245.11 89.2174 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+			(at 241.3 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 241.3 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 241.3 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 241.3 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e857e2d0-26e4-4b92-a379-40ca79f71cd1")
+		)
+		(pin "1"
+			(uuid "0378a121-335e-4ec6-91c2-efc1c6ade0f3")
+		)
+		(instances
+			(project ""
+				(path "/ffdbb2c2-c0c7-4e42-be77-90fd93012b1e"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 241.3 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8c25d92c-9be7-4747-ada6-f02940c9308b")
+		(property "Reference" "#PWR05"
+			(at 241.3 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 241.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 241.3 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 241.3 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 241.3 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "07f9a21c-3fa2-4ade-bbdb-84b86db8e93b")
+		)
+		(instances
+			(project "Rele wifi"
+				(path "/ffdbb2c2-c0c7-4e42-be77-90fd93012b1e"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 227.33 96.52 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "97de6a09-7392-40c9-8c16-d7b568a1ac94")
+		(property "Reference" "R4"
+			(at 227.33 99.568 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220"
+			(at 227.33 92.964 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 227.33 94.742 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 227.33 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 227.33 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "677ae143-fcc0-4291-bf41-fe98fed74755")
+		)
+		(pin "1"
+			(uuid "9a9c307b-9a79-404b-a928-a33ad5519282")
+		)
+		(instances
+			(project "Rele wifi"
+				(path "/ffdbb2c2-c0c7-4e42-be77-90fd93012b1e"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 241.3 104.14 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9d1fbb87-15b1-4078-9b85-a95ac714573a")
+		(property "Reference" "#PWR04"
+			(at 241.3 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 241.3 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 241.3 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 241.3 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 241.3 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fb23c3f2-79ad-4cb5-b5f1-9443a13f4804")
+		)
+		(instances
+			(project "Rele wifi"
+				(path "/ffdbb2c2-c0c7-4e42-be77-90fd93012b1e"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -4609,6 +4996,82 @@
 			(project ""
 				(path "/ffdbb2c2-c0c7-4e42-be77-90fd93012b1e"
 					(reference "K1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC337")
+		(at 238.76 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fdada606-966c-46b1-ac6d-881eb5d20516")
+		(property "Reference" "Q1"
+			(at 243.84 95.2499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC337"
+			(at 243.84 97.7899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(at 243.84 98.425 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf"
+			(at 238.76 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.8A Ic, 45V Vce, NPN Transistor, TO-92"
+			(at 238.76 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c5100205-90c0-49bc-aa61-8b1be59ab61a")
+		)
+		(pin "3"
+			(uuid "5dc0ec3a-73a2-4f74-9eca-e6e5d860db6d")
+		)
+		(pin "1"
+			(uuid "845122f2-9dc8-4039-a3b8-9f6b6cf7bd31")
+		)
+		(instances
+			(project "Rele wifi"
+				(path "/ffdbb2c2-c0c7-4e42-be77-90fd93012b1e"
+					(reference "Q1")
 					(unit 1)
 				)
 			)
