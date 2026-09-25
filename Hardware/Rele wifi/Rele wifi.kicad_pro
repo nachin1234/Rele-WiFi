@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 2.54
+          "drill": 0.0,
+          "height": 1.4,
+          "width": 0.975
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -123,7 +123,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.75,
+        "min_clearance": 0.0,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
@@ -136,7 +136,7 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.2,
+        "min_track_width": 0.0,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
@@ -187,8 +187,6 @@
         }
       ],
       "track_widths": [
-        0.0,
-        0.0,
         0.0,
         0.75,
         1.0
@@ -472,7 +470,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Rele wifi 2.kicad_pro",
+    "filename": "Rele wifi.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -632,7 +630,7 @@
   },
   "sheets": [
     [
-      "1a5734b3-aec8-47c8-9ec1-200a88fc117c",
+      "ffdbb2c2-c0c7-4e42-be77-90fd93012b1e",
       "Root"
     ]
   ],
