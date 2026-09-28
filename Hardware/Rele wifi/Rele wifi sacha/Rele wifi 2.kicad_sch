@@ -3293,12 +3293,6 @@
 		(uuid f538d3bb-01e1-4fb6-8c28-8ee42e67519d)
 	)
 	(junction
-		(at 168.91 33.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1552cfe8-fe7b-420e-a98a-f87dfeb35f2e")
-	)
-	(junction
 		(at 87.63 24.13)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3315,12 +3309,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "91e69944-5227-46e3-a7cf-1b1d25c7ff0b")
-	)
-	(junction
-		(at 168.91 30.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c02c5134-fc27-40d6-83f8-bf8b66cdc997")
 	)
 	(wire
 		(pts
@@ -3644,16 +3632,6 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 33.02) (xy 172.72 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f5ec121a-46ba-405a-a805-ef83bf81076b")
-	)
-	(wire
-		(pts
 			(xy 124.46 25.4) (xy 124.46 29.21)
 		)
 		(stroke
@@ -3661,16 +3639,6 @@
 			(type default)
 		)
 		(uuid "f7fb0200-66ec-4979-b42e-0ff95fe7aceb")
-	)
-	(wire
-		(pts
-			(xy 168.91 30.48) (xy 171.45 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f9ff777e-af00-4c7e-a4ba-6bdebe6b54c2")
 	)
 	(global_label "NO"
 		(shape input)
@@ -3751,28 +3719,6 @@
 		(uuid "35b19813-e743-4e6f-a91f-b72ee428586b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 258.5138 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape input)
-		(at 254 83.82 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "3d6b7f4d-ae69-4a34-b6ad-2be69e6cf195")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 247.1443 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3892,94 +3838,6 @@
 			)
 		)
 	)
-	(global_label "GND"
-		(shape input)
-		(at 271.78 59.69 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "69859d02-2cf0-4425-9a2f-d686ac09c213")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 278.6357 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "VIN"
-		(shape input)
-		(at 259.08 35.56 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7f8b088a-737d-4f22-8e35-050bf1a62e8c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 265.0891 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "VIN"
-		(shape input)
-		(at 203.2 62.23 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "813add93-4e6d-408a-9057-16c90181a9e1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 197.1909 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape input)
-		(at 171.45 30.48 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8550660b-d5b8-4536-8ebe-9adc8ede6518")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 178.3057 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "GPIO14"
 		(shape input)
 		(at 231.14 46.99 0)
@@ -4024,50 +3882,6 @@
 			)
 		)
 	)
-	(global_label "GND"
-		(shape input)
-		(at 259.08 38.1 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "dc771d54-8258-46bc-9ff7-b6822962f94a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 265.9357 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape input)
-		(at 231.14 59.69 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "dd46926c-59ef-4b94-b61c-3c533edbe35f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 237.9957 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "COM"
 		(shape input)
 		(at 264.16 24.13 180)
@@ -4081,50 +3895,6 @@
 		(uuid "e5adf4b3-70ae-40b8-bbbf-0d35f1f17a96")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 257.1229 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "VIN"
-		(shape input)
-		(at 172.72 33.02 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f29e67e4-03b9-494d-8e6c-1e693871a51d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 178.7291 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape input)
-		(at 203.2 59.69 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f321d0d7-9346-462f-a385-59f36c0a5ded")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 196.3443 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4256,6 +4026,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 231.14 59.69 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0a6e8146-736a-4595-8b68-96d08670bf1c")
+		(property "Reference" "#PWR07"
+			(at 237.49 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 234.95 59.6899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 231.14 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 231.14 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "debd7730-8386-43f8-9e14-e1bbf149be07")
+		)
+		(instances
+			(project "Rele wifi 2"
+				(path "/1a5734b3-aec8-47c8-9ec1-200a88fc117c"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 266.7 83.82 90)
 		(unit 1)
@@ -4351,7 +4188,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm"
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
 			(at 160.02 33.02 0)
 			(effects
 				(font
@@ -4388,6 +4225,73 @@
 			(project "Rele wifi 2"
 				(path "/1a5734b3-aec8-47c8-9ec1-200a88fc117c"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 271.78 59.69 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2466d4ea-59c2-4c75-9917-ceea37434a0e")
+		(property "Reference" "#PWR06"
+			(at 278.13 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 275.59 59.6899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 271.78 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 271.78 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 271.78 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "717d71d8-409e-4592-bdd7-d26ccdd256f6")
+		)
+		(instances
+			(project "Rele wifi 2"
+				(path "/1a5734b3-aec8-47c8-9ec1-200a88fc117c"
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -4454,6 +4358,72 @@
 			(project "Rele wifi 2"
 				(path "/1a5734b3-aec8-47c8-9ec1-200a88fc117c"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 203.2 62.23 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2c7f7bb1-94b1-4844-83be-82cc3f57ff40")
+		(property "Reference" "#PWR09"
+			(at 207.01 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 199.39 62.2299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 203.2 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 203.2 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3027c3f8-784b-44f1-80d8-2fad2008328a")
+		)
+		(instances
+			(project "Rele wifi 2"
+				(path "/1a5734b3-aec8-47c8-9ec1-200a88fc117c"
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -4612,6 +4582,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 259.08 35.56 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4576b845-bec6-4e6e-a87c-1d009d3c05b7")
+		(property "Reference" "#PWR010"
+			(at 255.27 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 262.89 35.5599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 259.08 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ccf90490-4121-42f1-812d-2338377a6ef0")
+		)
+		(instances
+			(project "Rele wifi 2"
+				(path "/1a5734b3-aec8-47c8-9ec1-200a88fc117c"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x03_Pin")
 		(at 254 38.1 0)
 		(unit 1)
@@ -4638,7 +4674,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x03_P2.00mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
 			(at 254 38.1 0)
 			(effects
 				(font
@@ -5199,7 +5235,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm"
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal"
 			(at 269.24 24.13 0)
 			(effects
 				(font
@@ -5239,6 +5275,73 @@
 			(project "Rele wifi 2"
 				(path "/1a5734b3-aec8-47c8-9ec1-200a88fc117c"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 203.2 59.69 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1044893-9fac-461a-b374-450166e85490")
+		(property "Reference" "#PWR08"
+			(at 196.85 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 199.39 59.6899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 203.2 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 203.2 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "427d97ee-8a61-48d7-ab60-1b6457fda601")
+		)
+		(instances
+			(project "Rele wifi 2"
+				(path "/1a5734b3-aec8-47c8-9ec1-200a88fc117c"
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -5519,6 +5622,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 254 83.82 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c9600568-08a3-4260-99a3-48ffe904924a")
+		(property "Reference" "#PWR05"
+			(at 247.65 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 250.952 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 254 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 254 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 254 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dd838f3a-2bbe-472a-ac8b-60db31692163")
+		)
+		(instances
+			(project "Rele wifi 2"
+				(path "/1a5734b3-aec8-47c8-9ec1-200a88fc117c"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "1N4007_1")
 		(lib_id "local_lib:1N4007")
 		(at 102.87 30.48 270)
@@ -5682,6 +5851,73 @@
 			(project "Rele wifi 2"
 				(path "/1a5734b3-aec8-47c8-9ec1-200a88fc117c"
 					(reference "K1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 259.08 38.1 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd3ecfae-addd-4a69-94da-19889a388fc7")
+		(property "Reference" "#PWR04"
+			(at 265.43 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 262.89 38.0999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 259.08 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 259.08 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f98a10a8-0750-45fd-8aa3-925290fb4982")
+		)
+		(instances
+			(project "Rele wifi 2"
+				(path "/1a5734b3-aec8-47c8-9ec1-200a88fc117c"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
