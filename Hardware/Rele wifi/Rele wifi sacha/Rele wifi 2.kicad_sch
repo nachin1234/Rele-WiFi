@@ -3840,7 +3840,7 @@
 	)
 	(global_label "GPIO14"
 		(shape input)
-		(at 231.14 46.99 0)
+		(at 231.14 49.53 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3850,7 +3850,7 @@
 		)
 		(uuid "ce0fe9a3-bcf0-4291-8e16-6158f5042827")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 241.0195 46.99 0)
+			(at 241.0195 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3928,7 +3928,7 @@
 	)
 	(global_label "GPIO12"
 		(shape input)
-		(at 231.14 49.53 0)
+		(at 231.14 46.99 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3938,7 +3938,7 @@
 		)
 		(uuid "ff0514f9-a382-4b5b-b3b2-7f3f979dce14")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 241.0195 49.53 0)
+			(at 241.0195 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
