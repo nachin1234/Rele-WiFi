@@ -5529,7 +5529,7 @@
 		(width 1)
 		(layer "F.Cu")
 		(net 12)
-		(uuid "4c03e264-dafe-4ca1-9908-7300eaf0b29e")
+		(uuid "0af2a786-b06d-4eea-9076-e80012822e51")
 	)
 	(segment
 		(start 197.14 54.29)
@@ -5537,7 +5537,7 @@
 		(width 1)
 		(layer "F.Cu")
 		(net 12)
-		(uuid "63ef0f7f-7a81-433b-9f0f-7e2c569564ad")
+		(uuid "823e95ff-0dae-4b72-80d6-345b7907dfe6")
 	)
 	(via
 		(at 197.14 54.29)

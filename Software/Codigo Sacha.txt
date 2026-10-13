@@ -1,0 +1,300 @@
+#include <ESP8266WiFi.h>
+#include <ESP8266WebServer.h>
+
+// ---------- WIFI ----------
+const char* ssid = "NOMBRE_DE_TU_WIFI";
+const char* password = "CONTRASENA_DE_TU_WIFI";
+
+// ---------- PINES ----------
+const int PIN_RELE = 5;   // GPIO5 = D1 en NodeMCU
+const int PIN_PIR  = 14;  // GPIO14 = D5
+const int PIN_BOTON = 12; // GPIO12 = D6
+const int PIN_LED = 4;    // GPIO4 = D2
+
+// Cambiar a LOW si tu modulo de rele se activa
+// cuando la entrada recibe LOW.
+const int RELE_ON = HIGH;
+const int RELE_OFF = LOW;
+
+// ---------- SERVIDOR ----------
+ESP8266WebServer server(80);
+
+// ---------- ESTADOS ----------
+bool armada = false;
+bool movimiento = false;
+bool alarmaDisparada = false;
+
+// ---------- TEMPORIZADORES ----------
+unsigned long ultimoCambioBoton = 0;
+unsigned long ultimoCambioLed = 0;
+
+const unsigned long debounceMs = 50;
+const unsigned long intervaloLed = 250;
+
+int lecturaAnterior = HIGH;
+int estadoBoton = HIGH;
+bool ledEncendido = false;
+
+// ---------- FUNCIONES ----------
+void actualizarSalidas() {
+  // El rele solo activa la segunda placa
+  // cuando la alarma se ha disparado.
+  if (alarmaDisparada) {
+    digitalWrite(PIN_RELE, RELE_ON);
+  } else {
+    digitalWrite(PIN_RELE, RELE_OFF);
+  }
+}
+
+void cambiarEstadoAlarma(bool activar) {
+  armada = activar;
+
+  // Al desarmar, se apaga la alarma y se
+  // borra el estado de movimiento.
+  if (!armada) {
+    alarmaDisparada = false;
+    movimiento = false;
+  }
+
+  actualizarSalidas();
+}
+
+void comprobarBoton() {
+  int lectura = digitalRead(PIN_BOTON);
+
+  if (lectura != lecturaAnterior) {
+    ultimoCambioBoton = millis();
+    lecturaAnterior = lectura;
+  }
+
+  if (millis() - ultimoCambioBoton >= debounceMs) {
+    if (lectura != estadoBoton) {
+      estadoBoton = lectura;
+
+      // INPUT_PULLUP: pulsado = LOW
+      if (estadoBoton == LOW) {
+        cambiarEstadoAlarma(!armada);
+      }
+    }
+  }
+}
+
+void comprobarPIR() {
+  movimiento = (digitalRead(PIN_PIR) == HIGH);
+
+  if (armada && movimiento) {
+    alarmaDisparada = true;
+  }
+
+  actualizarSalidas();
+}
+
+void controlarLED() {
+  unsigned long ahora = millis();
+
+  if (alarmaDisparada) {
+    // Parpadeo rapido si se disparo la alarma
+    if (ahora - ultimoCambioLed >= intervaloLed) {
+      ultimoCambioLed = ahora;
+      ledEncendido = !ledEncendido;
+      digitalWrite(PIN_LED, ledEncendido);
+    }
+  } else if (armada) {
+    // Luz fija cuando esta armada
+    ledEncendido = true;
+    digitalWrite(PIN_LED, HIGH);
+  } else {
+    // Apagado cuando esta desarmada
+    ledEncendido = false;
+    digitalWrite(PIN_LED, LOW);
+  }
+}
+
+// ---------- PAGINA WEB ----------
+String crearPagina() {
+  String html = R"HTML(
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistema de seguridad</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #eef1f5;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+.contenedor {
+  max-width: 440px;
+  margin: auto;
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px #0002;
+}
+h1 { font-size: 25px; }
+.estado {
+  padding: 14px;
+  border-radius: 9px;
+  font-weight: bold;
+  margin: 12px 0;
+}
+.boton {
+  display: block;
+  padding: 14px;
+  margin: 12px 0;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 17px;
+}
+.verde { background: #16834a; }
+.rojo { background: #c52c35; }
+.gris { background: #64748b; }
+p { font-size: 17px; }
+</style>
+</head>
+<body>
+<div class="contenedor">
+<h1>Sistema de seguridad</h1>
+
+<div id="estado" class="estado gris">Cargando...</div>
+<p>Sensor PIR: <b id="pir">--</b></p>
+<p>Alarma: <b id="alarma">--</b></p>
+<p>Rele: <b id="rele">--</b></p>
+
+<a class="boton verde" href="/armar">ARMAR ALARMA</a>
+<a class="boton rojo" href="/desarmar">DESARMAR ALARMA</a>
+
+<p><small>Actualizacion automatica cada segundo</small></p>
+<p><small>ESP8266 - Sistema local</small></p>
+</div>
+
+<script>
+async function actualizar() {
+  try {
+    const respuesta = await fetch('/estado');
+    const datos = await respuesta.json();
+
+    const estado = document.getElementById('estado');
+    estado.textContent = datos.armada
+      ? (datos.disparada ? 'ALARMA DISPARADA' : 'SISTEMA ARMADO')
+      : 'SISTEMA DESARMADO';
+
+    estado.className = 'estado ' +
+      (datos.disparada ? 'rojo' :
+      (datos.armada ? 'verde' : 'gris'));
+
+    document.getElementById('pir').textContent =
+      datos.movimiento ? 'MOVIMIENTO DETECTADO' : 'Sin movimiento';
+
+    document.getElementById('alarma').textContent =
+      datos.disparada ? 'ENCENDIDA' : 'APAGADA';
+
+    document.getElementById('rele').textContent =
+      datos.rele ? 'ACTIVADO' : 'DESACTIVADO';
+  } catch (error) {
+    document.getElementById('estado').textContent =
+      'Sin conexion con el sistema';
+  }
+}
+actualizar();
+setInterval(actualizar, 1000);
+</script>
+</body>
+</html>
+)HTML";
+
+  return html;
+}
+
+void manejarEstado() {
+  String json = "{";
+  json += "\"armada\":";
+  json += (armada ? "true" : "false");
+  json += ",\"movimiento\":";
+  json += (movimiento ? "true" : "false");
+  json += ",\"disparada\":";
+  json += (alarmaDisparada ? "true" : "false");
+  json += ",\"rele\":";
+  json += (alarmaDisparada ? "true" : "false");
+  json += "}";
+
+  server.send(200, "application/json", json);
+}
+
+void manejarArmar() {
+  cambiarEstadoAlarma(true);
+  server.sendHeader("Location", "/");
+  server.send(303);
+}
+
+void manejarDesarmar() {
+  cambiarEstadoAlarma(false);
+  server.sendHeader("Location", "/");
+  server.send(303);
+}
+
+// ---------- CONFIGURACION ----------
+void setup() {
+  Serial.begin(115200);
+
+  pinMode(PIN_RELE, OUTPUT);
+  digitalWrite(PIN_RELE, RELE_OFF);
+
+  pinMode(PIN_PIR, INPUT);
+  pinMode(PIN_BOTON, INPUT_PULLUP);
+  pinMode(PIN_LED, OUTPUT);
+  digitalWrite(PIN_LED, LOW);
+
+  Serial.println();
+  Serial.println("Iniciando sistema de seguridad...");
+
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password);
+
+  Serial.print("Conectando al WiFi");
+
+  unsigned long inicioWiFi = millis();
+
+  while (WiFi.status() != WL_CONNECTED &&
+         millis() - inicioWiFi < 20000) {
+    delay(250);
+    Serial.print(".");
+  }
+
+  if (WiFi.status() == WL_CONNECTED) {
+    Serial.println();
+    Serial.print("Direccion IP: ");
+    Serial.println(WiFi.localIP());
+  } else {
+    Serial.println();
+    Serial.println("No se conecto al WiFi.");
+    Serial.println("Se puede reintentar reiniciando la placa.");
+  }
+
+  server.on("/", []() {
+    server.send(200, "text/html", crearPagina());
+  });
+
+  server.on("/estado", manejarEstado);
+  server.on("/armar", manejarArmar);
+  server.on("/desarmar", manejarDesarmar);
+
+  server.begin();
+  Serial.println("Servidor web iniciado");
+}
+
+// ---------- BUCLE PRINCIPAL ----------
+void loop() {
+  server.handleClient();
+
+  comprobarBoton();
+  comprobarPIR();
+  controlarLED();
+
+  yield();
+}
